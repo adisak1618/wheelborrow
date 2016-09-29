@@ -38,7 +38,7 @@ var itemsdata = {
     {
       name: 'Sony QX Lens',
       price: '200/Day',
-      img: 'cameras/camera 5.JPG'
+      img: 'cameras/camera 5.jpg'
     },
     {
       name: 'Panasonic LUMIX GF8',
@@ -209,7 +209,7 @@ var itemsdata = {
     {
       name: 'Sony QX Lens',
       price: '200/Day',
-      img: 'cameras/camera 5.JPG'
+      img: 'cameras/camera 5.jpg'
     },
     {
       name: 'Samsung Gear 360 Camera',
