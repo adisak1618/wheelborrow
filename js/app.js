@@ -34,7 +34,7 @@ function initApp () {
     $('.modal')
       .modal('hide');
     $('.popup2').modal('show');
-    addToDatabase('http://localhost/submitrent', $('#rentname').val(), $('#rentemail').val());
+    addToDatabase('http://wheelborrow.co/submitrent', $('#rentname').val(), $('#rentemail').val());
 
   });
 
@@ -42,7 +42,7 @@ function initApp () {
     $('.modal')
       .modal('hide');
     $('.popup2').modal('show');
-    addToDatabase('http://localhost/submitborrow', 'borrow user', $('#borrowemail').val());
+    addToDatabase('http://wheelborrow.co/submitborrow', 'borrow user', $('#borrowemail').val());
   });
 
 
