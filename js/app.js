@@ -88,8 +88,8 @@ function initApp () {
     console.log(price);
     analytics.track(trackid, {
       name: title,
-      price: price
-    });
+      price:price    });
+    analytics.track(price, {category: trackid, label: title,value: 1});
   })
 
 }
