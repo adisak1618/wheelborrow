@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="XXT6sq7TNMF_ihtFcxH033yn_aQCk3pOhu6zp-dhffY" />
     <link rel="stylesheet" href="./semantic/semantic.min.css" media="screen" title="no title" charset="utf-8">
     <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="./semantic/semantic.min.js" charset="utf-8"></script>
@@ -20,7 +21,7 @@
     <title></title>
     <script type="text/javascript">
      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
-     analytics.load("IKiznUYjrx8nJgrj5y5iSr7G6I9Vgq");
+     analytics.load("IKiznUYjrx8nJgrj5y5iSr7G6I9VgqnI");
      analytics.page()
      }}();
     </script>
@@ -29,16 +30,16 @@
 
     <div id="mainmenu" class="ui fixed inverted menu">
 
-      <a href="http://semantic-ui.com/examples/fixed.html#" class="header item">
+      <a href="" class="header item item_tracking" data-name='home-button' data-item='home-button'>
         <img class="logo" src="./img/logo.png">
         Wheel Borrow
       </a>
-      <a href="/" class="item">Home</a>
+      <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
 
       <div class="right menu">
-        <a href="/" class="item">How It Work!</a>
+        <a  class="item item_tracking"  data-name='How-it-work' data-item='How-it-work'>How It Works!</a>
         <a class="item">
-          <div class="ui primary button listingyouitem_button">
+          <div class="ui primary button listingyouitem_button item_tracking" data-name='list-your-item' data-item='list-your-item'>
             List Your Item!
           </div>
         </a>
@@ -53,7 +54,7 @@
             <h1>Bangkok - Thailand</h1>
             <p>Rent Items from the People Near You! Wheelborrow is a peer-to-peer lending and borrowing platform for passionate travellers.</p>
           </div>
-          <div id="map"></div>
+          <div id="map" class="item_tracking" data-name='map-explor-section' data-item='map-explor-section'></div>
 
         </div>
         <div class="eight wide column" id="rightpanel">
@@ -70,30 +71,30 @@
                 </div>
                 <div class="field">
 
-                  <div class="ui fluid primary submit button signupbutton">Let's Go!</div>
+                  <div class="ui fluid primary submit button signupbutton item_tracking" data-name='start-browsing-button' data-item='start-browsing-button'>Start Browsing!</div>
                 </div>
               </div>
 
             </div>
           </div>
           <div class="ui segment margin10">
-            <a href="?type=all" class="ui large label">
-              <i class="shopping hashtag icon"></i>
+            <a href="?type=all" class="ui large label item_tracking" data-name='all-button-hastag' data-item='all-button-hastag'>
+              <i class=" hashtag icon"></i>
               All
             </a>
-            <a href="?type=camera" class="ui large red label">
-              <i class="shopping hashtag icon"></i>
+            <a href="?type=camera" class="ui large red label item_tracking"  data-name='camera-button-hastag' data-item='camera-button-hastag'>
+              <i class=" hashtag icon"></i>
               Camera
             </a>
-            <a href="?type=bikes" class="ui large green label">
-              <i class="shopping hashtag icon"></i>
+            <a href="?type=bikes" class="ui large green label item_tracking" data-name='bike-button-hastag' data-item='bike-button-hastag'>
+              <i class=" hashtag icon"></i>
               Bikes
             </a>
-            <a href="?type=bags" class="ui large orange label">
-              <i class="shopping  hashtag icon"></i>
+            <a href="?type=bags" class="ui large orange label item_tracking" data-name='bag-button-hastag' data-item='bag-button-hastag'>
+              <i class="  hashtag icon"></i>
               Bags
             </a>
-            <a href="?type=vr" class="ui large blue label">
+            <a href="?type=vr" class="ui large blue label item_tracking"  data-name='vr-button-hastag' data-item='vr-button-hastag'>
               <i class="shopping hashtag icon"></i>
               VR
             </a>
@@ -103,17 +104,16 @@
           <script id="item-template" type="text/x-handlebars-template">
             <div id="listitem" class="ui two stackable special cards pad1em">
               {{#each items}}
-                <div class="card">
+                <div class="card item_tracking" id="{{../item_type}}-{{@index}}"  data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>
                   <div class="blurring dimmable image">
                     <div class="ui dimmer">
                       <div class="content">
                         <div class="center">
-                          <div class="ui inverted button">Book Now!</div>
+                          <div class="ui inverted button" data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Book Now!</div>
                         </div>
                       </div>
                     </div>
                     <img src="./img/{{this.img}}">
-
                   </div>
                   <div class="content">
                     <a class="title">{{this.name}}</a>
@@ -216,9 +216,9 @@
         </div>
         <div class="field">
           <label>Email</label>
-          <input type="text" name="last-name" placeholder="Last Name">
+          <input type="text" name="email-signup" placeholder="Email">
         </div>
-        <div class="ui button fluid primary submit" type="submit">Submit</div>
+        <div class="ui button fluid primary submit item_tracking" data-name='submit-rent' data-item='submit-rent'>Submit</div>
       </form>
       </div>
       <!-- <div class="actions">
@@ -248,9 +248,9 @@
         <form class="ui form">
         <div class="field">
           <label>Email</label>
-          <input type="text" name="last-name" placeholder="Last Name">
+          <input type="text" name="email" placeholder="Email">
         </div>
-        <div class="ui button fluid primary submit" type="submit">Submit</div>
+        <div class="ui button fluid primary submit item_tracking" data-name='submit-list' data-item='submit-list' type="submit">Submit</div>
       </form>
       </div>
       <!-- <div class="actions">
@@ -264,6 +264,7 @@
     <script type="text/javascript">
       var type = getParameterByName('type');
       var items = [];
+
       function render(type) {
         var theTemplateScript = $("#item-template").html();
 
@@ -274,25 +275,32 @@
         switch (type) {
           case 'all':
             items = itemsdata.all;
+
             break;
           case 'bikes':
             items = itemsdata.bikes;
+
             break;
           case 'bags':
             items = itemsdata.bags;
+
             break;
           case 'camera':
             items = itemsdata.camera;
+
+
             break;
           case 'vr':
-            console.log('hi')
             items = itemsdata.vr;
+
             break;
           default:
             items = itemsdata.all;
         }
+
         var context = {
-          items: items
+          items: items,
+          item_type: type
         };
 
 

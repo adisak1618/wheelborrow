@@ -70,7 +70,19 @@ function initApp () {
     });
   });
 
-
+  //Tracking segment
+  $('.item_tracking').click(function () {
+    trackid = $(this).data('item');
+    title = $(this).data('name');
+    if (title === undefined) {
+      title = "no data"
+    }
+    console.log(trackid);
+    console.log(title);
+    analytics.track(trackid, {
+      name: title
+    });
+  })
 
 }
 
