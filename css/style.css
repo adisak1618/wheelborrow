@@ -1,0 +1,148 @@
+body {
+  background-color: #FFFFFF;
+}
+#mainmenu a{
+  font-weight: bold;
+  color: #FFF;
+}
+.center {
+  text-align: center;
+}
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+}
+.main.container {
+  margin-top: 7em;
+}
+.wireframe {
+  margin-top: 2em;
+}
+.ui.footer.segment {
+  margin: 5em 0em 0em;
+  padding: 5em 0em;
+}
+.app_contianer {
+  width: 100%;
+  padding: 1rem;
+}
+.pad1em {
+  padding: 1em;
+}
+.margin10{
+  margin: 10px !important;
+}
+#app {
+  margin-top: 39px;
+}
+#app .column {
+  padding: 0px !important;
+}
+#app .ui.grid {
+  margin: 0px !important;
+}
+#app .ui.grid .row {
+  padding: 0px !important;
+}
+#map {
+  position: fixed !important;
+  top: 203px;
+  left: 0px;
+  /*height: 100%;*/
+  width: 50%;
+}
+#mapContianer{
+  position: fixed;
+  top: 53px;
+  left: 0px;
+  height: 100%;
+  width: 50%;
+}
+
+#rightpanel {
+  background: #fe8c00;
+  background: -webkit-linear-gradient(to left, #fe8c00 , #f83600);
+  background: linear-gradient(to left, #fe8c00 , #f83600);
+}
+#highlight_title.bangkok {
+  position: fixed;
+  width: 50%;
+  top: 53px;
+  background: url('./../img/bbk.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+  padding: 20px;
+  height: 163px;
+}
+#highlight_title h1, #highlight_title p {
+  background: rgba(0, 0, 0, 0.5);;
+  padding: 5px;
+  float: left;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 83px -5px rgba(0,0,0,0.63);
+  -moz-box-shadow: 0px 0px 83px -5px rgba(0,0,0,0.63);
+  box-shadow: 0px 0px 83px -5px rgba(0,0,0,0.63);
+}
+#highlight_title p {
+  font-size: 1.1em;
+}
+
+#listitem .card .title{
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+listitem .card .price{
+  color: #444;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.ui.form .fields {
+  margin: 0px !important;
+}
+
+.ui.footer.segment {
+  margin-top: 0px !important;
+}
+
+
+/*Modal*/
+
+@media only screen and (max-width: 767px) {
+  .ui.modal {
+    width: 95%;
+    margin: 0em 0em 0em -47.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ui.modal {
+    width: 50%;
+    margin: 0em 0em 0em -25%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .ui.modal {
+    width: 300px;
+    margin: 0em 0em 0em -150px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ui.modal {
+    width: 400px;
+    margin: 0em 0em 0em -200px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .ui.modal {
+    width: 400px;
+    margin: 0em 0em 0em -200px;
+  }
+}
