@@ -18,7 +18,7 @@ var itemsdata = {
     {
       name: 'Oculus Rift Set VR',
       price: '750/Day',
-      img: 'vr/vr 6.jpg'
+      img: 'vr/vr 6.JPG'
     },
     {
       name: 'Timbuk 2 Waterproof Pack',
@@ -28,7 +28,7 @@ var itemsdata = {
     {
       name: 'HTC Vive',
       price: '1000/day',
-      img: 'vr/vr 2.jpg'
+      img: 'vr/vr 2.JPG'
     },
     {
       name: 'Trek 1.1 (2016)',
@@ -38,17 +38,17 @@ var itemsdata = {
     {
       name: 'Sony QX Lens',
       price: '200/Day',
-      img: 'cameras/camera 5.jpg'
+      img: 'cameras/camera 5.JPG'
     },
     {
       name: 'Panasonic LUMIX GF8',
       price: '200/Day',
-      img: 'cameras/camera 1.jpg'
+      img: 'cameras/camera 1.JPG'
     },
     {
       name: 'Samsung Gear 360 Camera',
       price: '200/Day',
-      img: 'cameras/camera 6.jpg'
+      img: 'cameras/camera 6.JPG'
     },
     {
       name: 'GoPro Hero 3+ Set',
@@ -189,7 +189,7 @@ var itemsdata = {
     {
       name: 'Panasonic LUMIX GF8',
       price: '200/Day',
-      img: 'cameras/camera 1.jpg'
+      img: 'cameras/camera 1.JPG'
     },
     {
       name: 'GoPro Hero 3+',
@@ -209,12 +209,12 @@ var itemsdata = {
     {
       name: 'Sony QX Lens',
       price: '200/Day',
-      img: 'cameras/camera 5.jpg'
+      img: 'cameras/camera 5.JPG'
     },
     {
       name: 'Samsung Gear 360 Camera',
       price: '200/Day',
-      img: 'cameras/camera 6.jpg'
+      img: 'cameras/camera 6.JPG'
     }
   ],
   vr: [
@@ -226,7 +226,7 @@ var itemsdata = {
     {
       name: 'HTC Vive',
       price: '1000/day',
-      img: 'vr/vr 2.jpg'
+      img: 'vr/vr 2.JPG'
     },
     {
       name: 'Samsung Gear',
@@ -246,7 +246,7 @@ var itemsdata = {
     {
       name: 'Oculus Rift Set VR',
       price: '750/Day',
-      img: 'vr/vr 6.jpg'
+      img: 'vr/vr 6.JPG'
     }
   ]
 }
