@@ -34,12 +34,15 @@ function initApp () {
     $('.modal')
       .modal('hide');
     $('.popup2').modal('show');
+    addToDatabase('http://localhost/submitrent', $('#rentname').val(), $('#rentemail').val());
+
   });
 
   $('.popup3 .submit').click(function (e) {
     $('.modal')
       .modal('hide');
     $('.popup2').modal('show');
+    addToDatabase('http://localhost/submitborrow', 'borrow user', $('#borrowemail').val());
   });
 
 
@@ -140,4 +143,11 @@ function getUrlVars()
       if (!results) return null;
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  function addToDatabase (url, name, email) {
+    $.post( url, { name: name, email: email })
+    .done(function( data ) {
+      alert( "Data Loaded: " + data );
+    });
   }
