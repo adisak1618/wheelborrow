@@ -48,7 +48,7 @@
         <div class="eight wide column">
           <div id="highlight_title" class="city bangkok">
             <h1>Bangkok - Thailand</h1>
-            <p>Bike New York and enjoy the best bicycle adventures the big apple has to offer. Explore the Brooklyn Bridge, cruise Central Park and traverse Times Square on your NYC bike share.</p>
+            <p>Rent Items from the People Near You! Wheelborrow is a peer-to-peer lending and borrowing platform for passionate travellers.</p>
           </div>
           <div id="map"></div>
 
@@ -74,20 +74,24 @@
             </div>
           </div>
           <div class="ui segment margin10">
+            <a href="?type=all" class="ui large label">
+              <i class="shopping hashtag icon"></i>
+              All
+            </a>
             <a href="?type=camera" class="ui large red label">
-              <i class="shopping bag icon"></i>
+              <i class="shopping hashtag icon"></i>
               Camera
             </a>
             <a href="?type=bikes" class="ui large green label">
-              <i class="shopping camera retro icon"></i>
+              <i class="shopping hashtag icon"></i>
               Bikes
             </a>
             <a href="?type=bags" class="ui large orange label">
-              <i class="shopping bag bicycle"></i>
+              <i class="shopping  hashtag icon"></i>
               Bags
             </a>
             <a href="?type=vr" class="ui large blue label">
-              <i class="shopping game icon"></i>
+              <i class="shopping hashtag icon"></i>
               VR
             </a>
 
@@ -134,15 +138,15 @@
         </div>
       </div>
     </div>
-    <div class="ui inverted vertical footer segment">
+    <!-- <div class="ui inverted vertical footer segment">
       <div class="ui center aligned container">
         <div class="ui small image">
           <img src="./img/logo.png" class="ui centered mini image">
         </div>
         <h2>Wheel Borrow</h2>
-        <span>© 2016 SISU, All Rights Reserved</span>
+        <span>© 2016 Wheel Borrow, All Rights Reserved</span>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="ui inverted vertical footer segment">
       <div class="ui center aligned container">
         <div class="ui stackable inverted divided grid">
@@ -265,6 +269,9 @@
         console.log(type);
         // Define our data object
         switch (type) {
+          case 'all':
+            items = itemsdata.all;
+            break;
           case 'bikes':
             items = itemsdata.bikes;
             break;
@@ -279,7 +286,7 @@
             items = itemsdata.vr;
             break;
           default:
-            items = itemsdata.bikes;
+            items = itemsdata.all;
         }
         var context = {
           items: items
