@@ -84,9 +84,9 @@ function initApp () {
     if (price === undefined) {
       price = "no price"
     }
-    analytics.track(trackid, {
-      name: title,
-      price:price    });
+    // analytics.track(trackid, {
+    //   name: title,
+    //   price:price    });
 
     analytics.track(price, {category: (type === null ? 'all': type), label: title,value: 1});
     console.log(getParameterByName('type'));
