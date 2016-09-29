@@ -75,6 +75,7 @@ function initApp () {
     trackid = $(this).data('item');
     title = $(this).data('name');
     price = $(this).data('price');
+    type = getParameterByName('type');
     console.log($(this));
     if (title === undefined) {
       title = "no data"
@@ -83,13 +84,12 @@ function initApp () {
     if (price === undefined) {
       price = "no price"
     }
-    console.log(trackid);
-    console.log(title);
-    console.log(price);
     analytics.track(trackid, {
       name: title,
       price:price    });
-    analytics.track(price, {category: trackid, label: title,value: 1});
+
+    analytics.track(price, {category: (type === null ? 'all': type), label: title,value: 1});
+    console.log(getParameterByName('type'));
   })
 
 }
