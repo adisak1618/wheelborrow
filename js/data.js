@@ -43,12 +43,12 @@ var itemsdata = {
     {
       name: 'Panasonic LUMIX GF8',
       price: '200/Day',
-      img: 'cameras/camera 1.JPG'
+      img: 'cameras/camera 1.jpg'
     },
     {
       name: 'Samsung Gear 360 Camera',
       price: '200/Day',
-      img: 'cameras/camera 6.JPG'
+      img: 'cameras/camera 6.jpg'
     },
     {
       name: 'GoPro Hero 3+ Set',
@@ -189,7 +189,7 @@ var itemsdata = {
     {
       name: 'Panasonic LUMIX GF8',
       price: '200/Day',
-      img: 'cameras/camera 1.JPG'
+      img: 'cameras/camera 1.jpg'
     },
     {
       name: 'GoPro Hero 3+',
@@ -214,7 +214,7 @@ var itemsdata = {
     {
       name: 'Samsung Gear 360 Camera',
       price: '200/Day',
-      img: 'cameras/camera 6.JPG'
+      img: 'cameras/camera 6.jpg'
     }
   ],
   vr: [
