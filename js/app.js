@@ -74,13 +74,21 @@ function initApp () {
   $('.item_tracking').click(function () {
     trackid = $(this).data('item');
     title = $(this).data('name');
+    price = $(this).data('price');
+    console.log($(this));
     if (title === undefined) {
       title = "no data"
     }
+
+    if (price === undefined) {
+      price = "no price"
+    }
     console.log(trackid);
     console.log(title);
+    console.log(price);
     analytics.track(trackid, {
-      name: title
+      name: title,
+      price: price
     });
   })
 

@@ -104,12 +104,12 @@
           <script id="item-template" type="text/x-handlebars-template">
             <div id="listitem" class="ui two stackable special cards pad1em">
               {{#each items}}
-                <div class="card item_tracking" id="{{../item_type}}-{{@index}}"  data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>
+                <div class="card item_tracking" id="{{../item_type}}-{{@index}}" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>
                   <div class="blurring dimmable image">
                     <div class="ui dimmer">
                       <div class="content">
                         <div class="center">
-                          <div class="ui inverted button" data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Book Now!</div>
+                          <div class="ui inverted button" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Book Now!</div>
                         </div>
                       </div>
                     </div>
@@ -304,10 +304,11 @@
           default:
             items = itemsdata.all;
         }
-
+        console.log('what type');
+        console.log(type);
         var context = {
           items: items,
-          item_type: type
+          item_type: (type === null ? 'all': type)
         };
 
 
@@ -322,19 +323,19 @@
       initApp();
     </script>
     <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '957508371061027');
-    fbq('track', "PageView");</script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=957508371061027&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
+  fbq('init', '957508371061027');
+  fbq('track', "PageView");</script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=957508371061027&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
 
 
     <script async defer
