@@ -148,6 +148,6 @@ function getUrlVars()
   function addToDatabase (url, name, email) {
     $.post( url, { name: name, email: email })
     .done(function( data ) {
-      alert( "Data Loaded: " + data );
+      console.log( "Data Loaded: " + data );
     });
   }
