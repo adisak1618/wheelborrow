@@ -1,20 +1,4 @@
-var locations = [
-  {lat: 13.7375714, lng: 100.5021517},
-  {lat: 13.739254, lng: 100.5558497},
-  {lat: 13.7776709, lng: 100.5581593},
-  {lat: 13.8309393, lng: 100.5191849},
-  {lat: 13.7675714, lng: 100.5001517},
-  {lat: 13.6375714, lng: 100.4021517},
-  {lat: 13.6375714, lng: 100.4521517},
-  {lat: 13.6075714, lng: 100.4921517},
-  {lat: 13.7375714, lng: 100.3021517},
-  {lat: 13.7061368, lng: 100.6233907},
-  {lat: 13.6216978, lng: 100.6635198},
-  {lat: 13.591674, lng: 100.5988513},
-  {lat: 13.7330611, lng: 100.5385132},
-  {lat: 13.691674, lng: 100.5488513},
-  {lat: 13.651674, lng: 100.5688513}
-];
+
 
 function initApp () {
   $('.listingyouitem_button').click(function () {
@@ -97,30 +81,7 @@ function initApp () {
 
 }
 
-function initialize() {
-  // Create a map object and specify the DOM element for display.
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 13.7375714, lng: 100.5021517},
-    scrollwheel: false,
-    zoom: 11
-  });
-  var shape = {
-    coords: [1, 1, 1, 20, 18, 20, 18, 1],
-    type: 'poly'
-  };
 
-  for(var i = 0; i < locations.length; i++) {
-    var marker = new google.maps.Marker({
-      animation: google.maps.Animation.DROP,
-      map: map,
-      shape: shape,
-      position: locations[i],
-      title:"Hello World!"
-    });
-  }
-
-  console.log(locations);
-}
 
 function getUrlVars()
   {

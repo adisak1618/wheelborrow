@@ -250,3 +250,16 @@ var itemsdata = {
     }
   ]
 }
+function genLocation (lat, lng) {
+  var map = [];
+  for (var i = 1; i <= 10 ; i++) {
+    type = -1;
+    if ((Math.random()*10) <= 5) {
+      type = 1;
+    }
+    newlat = lat + type*(Math.floor((Math.random()*1000000)/10)/10000000);
+    newlng = lng + type*(Math.floor((Math.random()*1000000)/10)/10000000);
+    map.push({lat: newlat, lng: newlng});
+  }
+  console.log(map);
+}
