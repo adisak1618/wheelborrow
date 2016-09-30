@@ -14,6 +14,17 @@ function initApp () {
       .modal('show');
   });
 
+  $('.howitworkbutton').click(function () {
+    $('.modal.howitwork_popup')
+      .modal('show');
+  });
+
+// work it work
+  $('#listitem a').click(function () {
+    $('.modal.popup1')
+      .modal('show');
+  });
+
   $('.popup1 .submit').click(function (e) {
     $('.modal')
       .modal('hide');

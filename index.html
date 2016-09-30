@@ -33,7 +33,7 @@
       <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
 
       <div class="right menu">
-        <a  class="item item_tracking"  data-name='How-it-work' data-item='How-it-work'>How It Works!</a>
+        <a  class="item item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>How It Works!</a>
         <a class="item">
           <div class="ui primary button listingyouitem_button item_tracking" data-name='list-your-item' data-item='list-your-item'>
             List Your Item!
@@ -105,7 +105,7 @@
                     <div class="ui dimmer">
                       <div class="content">
                         <div class="center">
-                          <div class="ui inverted button" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Book Now!</div>
+                          <div class="ui inverted button" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Sign Up!</div>
                         </div>
                       </div>
                     </div>
@@ -114,8 +114,8 @@
                   <div class="content">
                     <a class="title">{{this.name}}</a>
                     <span class="right floated">
-                       <i class="dollar outline dollar icon"></i>
-                      <span class="price">  {{this.price}} </span>
+                       <i class="bitcoin outline bitcoin icon"></i>
+                      <span class="price">  {{this.price}}/Day </span>
                      </span>
                   </div>
                   <!-- <div class="extra content">
@@ -201,10 +201,10 @@
     <!-- Modal -->
     <!-- Sigup  -->
     <div class="ui modal popup1">
-      <div class="header center">Book Now!</div>
+      <div class="header center">Sign Up!</div>
       <div class="content">
-        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
-        <p class="center">Join a network of passicnate traveller that can lend you item for your next trip</p>
+        <div class="center"><i class="sign in icon huge"></i></div>
+        <p class="center"> Join a network of passionate travellers that can lend you items for your next trip!</p>
         <form class="ui form">
         <div class="field">
           <label>Name</label>
@@ -223,6 +223,17 @@
         <div class="ui cancel button">Cancel</div>
       </div> -->
     </div>
+    <!-- How it work! -->
+    <div class="ui modal howitwork_popup">
+      <div class="content">
+        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
+        <h1 class="center">How It Works!</h1>
+        <p class="center">Thanks for letting us know you’re interested. We’re still working on the beta to deliver the best experience possible for our follow travellers. Sign up to our mailing list below to get notified once our site is live!</p>
+      </div>
+      <div class="actions">
+        <div class="ui cancel button">Close</div>
+      </div>
+    </div>
     <!-- Thank you for sigup -->
     <div class="ui modal popup2">
       <div class="content">
@@ -239,8 +250,8 @@
     <div class="ui modal popup3">
       <div class="header center">List Your Item Now!</div>
       <div class="content">
-        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
-        <h2 class="center">Earn money on idle items siting in your house</h2>
+        <div class="center"><i class="unordered list icon big"></i></div><br/>
+        <p class="center">Earn extra money on idle items siting in your house. Wheel borrow is safe, convenient and free to use! Sign up to get the best out of the experience</p>
         <form class="ui form">
         <div class="field">
           <label>Email</label>

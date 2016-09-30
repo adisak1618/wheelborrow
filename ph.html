@@ -26,16 +26,16 @@
 
     <div id="mainmenu" class="ui fixed inverted menu">
 
-      <a href="" class="header item item_tracking" data-name='home-button' data-item='home-button'>
+      <a href="" class="header item item_tracking" data-name='ph-home-button' data-item='ph-home-button'>
         <img class="logo" src="./img/logo.png">
         Wheel Borrow
       </a>
-      <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
+      <!-- <a class="item item_tracking" data-name='ph-home-button' data-item='ph-home-button'>Home</a> -->
 
       <div class="right menu">
-        <a  class="item item_tracking"  data-name='How-it-work' data-item='How-it-work'>How It Works!</a>
+        <a  class="item item_tracking howitworkbutton"  data-name='ph-How-it-work' data-item='ph-How-it-work'>How It Works!</a>
         <a class="item">
-          <div class="ui primary button listingyouitem_button item_tracking" data-name='list-your-item' data-item='list-your-item'>
+          <div class="ui primary button listingyouitem_button item_tracking" data-name='ph-list-your-item' data-item='ph-list-your-item'>
             List Your Item!
           </div>
         </a>
@@ -50,7 +50,7 @@
             <h1>Manila - Philippines</h1>
             <p>Rent Items from the People Near You! Wheelborrow is a peer-to-peer lending and borrowing platform for passionate travellers.</p>
           </div>
-          <div id="map" class="item_tracking" data-name='map-explor-section' data-item='map-explor-section'></div>
+          <div id="map" class="item_tracking" data-name='ph-map-explor-section' data-item='ph-map-explor-section'></div>
 
         </div>
         <div class="eight wide column" id="rightpanel">
@@ -67,30 +67,30 @@
                 </div>
                 <div class="field">
 
-                  <div class="ui fluid primary submit button signupbutton item_tracking" data-name='start-browsing-button' data-item='start-browsing-button'>Start Browsing!</div>
+                  <div class="ui fluid primary submit button signupbutton item_tracking" data-name='ph-start-browsing-button' data-item='ph-start-browsing-button'>Start Browsing!</div>
                 </div>
               </div>
 
             </div>
           </div>
           <div class="ui segment margin10">
-            <a href="?type=all" class="ui large label item_tracking" data-name='all-button-hastag' data-item='all-button-hastag'>
+            <a href="?type=all" class="ui large label item_tracking" data-name='ph-all-button-hastag' data-item='ph-all-button-hastag'>
               <i class=" hashtag icon"></i>
               All
             </a>
-            <a href="?type=camera" class="ui large red label item_tracking"  data-name='camera-button-hastag' data-item='camera-button-hastag'>
+            <a href="?type=camera" class="ui large red label item_tracking"  data-name='ph-camera-button-hastag' data-item='ph-camera-button-hastag'>
               <i class=" hashtag icon"></i>
               Camera
             </a>
-            <a href="?type=bikes" class="ui large green label item_tracking" data-name='bike-button-hastag' data-item='bike-button-hastag'>
+            <a href="?type=bikes" class="ui large green label item_tracking" data-name='ph-bike-button-hastag' data-item='ph-bike-button-hastag'>
               <i class=" hashtag icon"></i>
               Bikes
             </a>
-            <a href="?type=bags" class="ui large orange label item_tracking" data-name='bag-button-hastag' data-item='bag-button-hastag'>
+            <a href="?type=bags" class="ui large orange label item_tracking" data-name='ph-bag-button-hastag' data-item='ph-bag-button-hastag'>
               <i class="  hashtag icon"></i>
               Bags
             </a>
-            <a href="?type=vr" class="ui large blue label item_tracking"  data-name='vr-button-hastag' data-item='vr-button-hastag'>
+            <a href="?type=vr" class="ui large blue label item_tracking"  data-name='ph-vr-button-hastag' data-item='ph-vr-button-hastag'>
               <i class="shopping hashtag icon"></i>
               VR
             </a>
@@ -100,12 +100,12 @@
           <script id="item-template" type="text/x-handlebars-template">
             <div id="listitem" class="ui two stackable special cards pad1em">
               {{#each items}}
-                <div class="card item_tracking" id="{{../item_type}}-{{@index}}" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>
+                <div class="card item_tracking" id="{{../item_type}}-{{@index}}" data-price='ph-{{this.price}}' data-name='ph-{{this.name}}' data-item='ph-{{../item_type}}-{{@index}}'>
                   <div class="blurring dimmable image">
                     <div class="ui dimmer">
                       <div class="content">
                         <div class="center">
-                          <div class="ui inverted button" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Book Now!</div>
+                          <div class="ui inverted button" data-price='ph-{{this.price}}' data-name='ph-{{this.name}}' data-item='ph-{{../item_type}}-{{@index}}'>Sign Up!</div>
                         </div>
                       </div>
                     </div>
@@ -114,8 +114,8 @@
                   <div class="content">
                     <a class="title">{{this.name}}</a>
                     <span class="right floated">
-                       <i class="dollar outline dollar icon"></i>
-                      <span class="price">  {{this.price}} </span>
+                       <i class="peso icon"></i>
+                      <span class="price">  {{this.price}}/Day </span>
                      </span>
                   </div>
                   <!-- <div class="extra content">
@@ -201,10 +201,10 @@
     <!-- Modal -->
     <!-- Sigup  -->
     <div class="ui modal popup1">
-      <div class="header center">Book Now!</div>
+      <div class="header center">Sign Up!</div>
       <div class="content">
-        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
-        <p class="center">Join a network of passicnate traveller that can lend you item for your next trip</p>
+        <div class="center"><i class="sign in icon huge"></i></div>
+        <p class="center"> Join a network of passionate travellers that can lend you items for your next trip!</p>
         <form class="ui form">
         <div class="field">
           <label>Name</label>
@@ -234,13 +234,23 @@
         <div class="ui cancel button">Close</div>
       </div>
     </div>
-
+    <!-- How it work! -->
+    <div class="ui modal howitwork_popup">
+      <div class="content">
+        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
+        <h1 class="center">How It Works!</h1>
+        <p class="center">Thanks for letting us know you’re interested. We’re still working on the beta to deliver the best experience possible for our follow travellers. Sign up to our mailing list below to get notified once our site is live!</p>
+      </div>
+      <div class="actions">
+        <div class="ui cancel button">Close</div>
+      </div>
+    </div>
     <!-- LIST YOUR ITEM -->
     <div class="ui modal popup3">
       <div class="header center">List Your Item Now!</div>
       <div class="content">
-        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
-        <h2 class="center">Earn money on idle items siting in your house</h2>
+        <div class="center"><i class="unordered list icon big"></i></div><br/>
+        <p class="center">Earn extra money on idle items siting in your house. Wheel borrow is safe, convenient and free to use! Sign up to get the best out of the experience</p>
         <form class="ui form">
         <div class="field">
           <label>Email</label>
@@ -314,6 +324,28 @@
         var theTemplateScript = $("#item-template").html();
 
         // Compile the template
+        itemsdata.all = itemsdata.all.map(function (item) {
+          // console.log(Math.floor((Number(item.price)*1395)/1000));
+          return Object.assign({}, item, {price: Math.floor((Number(item.price)*1395)/1000)});
+        });
+        itemsdata.bikes = itemsdata.bikes.map(function (item) {
+          // console.log(Math.floor((Number(item.price)*1395)/1000));
+          return Object.assign({}, item, {price: Math.floor((Number(item.price)*1395)/1000)});
+        });
+        itemsdata.bags = itemsdata.bags.map(function (item) {
+          // console.log(Math.floor((Number(item.price)*1395)/1000));
+          return Object.assign({}, item, {price: Math.floor((Number(item.price)*1395)/1000)});
+        });
+        itemsdata.camera = itemsdata.camera.map(function (item) {
+          // console.log(Math.floor((Number(item.price)*1395)/1000));
+          return Object.assign({}, item, {price: Math.floor((Number(item.price)*1395)/1000)});
+        });
+        itemsdata.vr = itemsdata.vr.map(function (item) {
+          // console.log(Math.floor((Number(item.price)*1395)/1000));
+          return Object.assign({}, item, {price: Math.floor((Number(item.price)*1395)/1000)});
+        });
+        console.log('wtf');
+        // console.log(list_of_item_ph);
         var theTemplate = Handlebars.compile(theTemplateScript);
         console.log(type);
         // Define our data object
