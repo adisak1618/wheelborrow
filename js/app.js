@@ -40,6 +40,13 @@ function initApp () {
     addToDatabase('http://wheelborrow.co/submitborrow', 'borrow user', $('#borrowemail').val());
   });
 
+  $('.howitwork_popup .submit').click(function (e) {
+    $('.modal')
+      .modal('hide');
+    $('.popup2').modal('show');
+    addToDatabase('http://wheelborrow.co/submitborrow', 'borrow user', $('#borrowemail2').val());
+  });
+
 
   setTimeout(function(){
     $('.special.cards .image').dimmer({
