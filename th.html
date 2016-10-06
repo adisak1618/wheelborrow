@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="XXT6sq7TNMF_ihtFcxH033yn_aQCk3pOhu6zp-dhffY" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./semantic/semantic.min.css" media="screen" title="no title" charset="utf-8">
+    <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="./semantic/semantic.min.js" charset="utf-8"></script>
+    <script src="./js/pickable/picker.js" charset="utf-8"></script>
+    <script src="./js/pickable/picker.date.js" charset="utf-8"></script>
+    <script src="./js/pickable/picker.time.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/default.date.css">
+    <link rel="stylesheet" href="./css/default.time.css">
+    <link rel="stylesheet" href="./css/style.css" media="screen" title="no title">
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.3/picker.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.3/picker.date.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.3/picker.time.js"></script> -->
+    <script src="./js/legacy.js"></script>
+    <script src="./js/handlebars.js"></script>
+    <title>Wheel borrow - สังคมของนักเดินทาง แลกเปลี่ยนของที่คุณไม่ได้ใช้</title>
+
+  </head>
+  <body class="th" data-gr-c-s-loaded="true">
+
+    <div id="mainmenu" class="ui fixed inverted menu">
+
+      <a href="" class="header item item_tracking" data-name='home-button' data-item='home-button'>
+        <img class="logo" src="./img/logo.png">
+        Wheel Borrow
+      </a>
+      <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
+
+      <div class="right menu">
+        <a  class="item item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>ทำงานยังไง?</a>
+        <a class="item">
+          <div class="ui primary button listingyouitem_button item_tracking" data-name='list-your-item' data-item='list-your-item'>
+            ต้องการให้เช่า
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <div class="app_contianer">
+      <div id="app" class="ui stackable grid">
+
+        <div class="eight wide column">
+          <div id="highlight_title" class="city bangkok">
+            <h1>กรุงเทพ - ประเทศไทย</h1>
+            <p>ยืมของที่คุณต้องใช้จากคนระแวกเดียวกัน  Wheelborrow คือระบบที่ให้คุณได้แบ่งปันของที่คุณไม่ได้ใช้ ให้กับคนอื่นได้นำไปใช้ โดยการให้ยืมเพื่อเป็นประโยชน์แก่ผู้อื่นและยังได้ผลตอบแทนด้วย</p>
+          </div>
+          <div id="map" class="item_tracking" data-name='map-explor-section' data-item='map-explor-section'></div>
+
+        </div>
+        <div class="eight wide column" id="rightpanel">
+          <div class="ui segment margin10">
+            <div class="ui tiny form">
+              <div class="three fields">
+                <div class="field">
+
+                  <input placeholder="วันที่มารับ" type="text" id="pickupdate">
+                </div>
+                <div class="field">
+
+                  <input placeholder="วันที่คืน" type="text" id="returndate">
+                </div>
+                <div class="field">
+
+                  <div class="ui fluid primary submit button signupbutton item_tracking" data-name='start-browsing-button' data-item='start-browsing-button'>ค้นหา!</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="ui segment margin10">
+            <a href="?type=all" class="ui large label item_tracking" data-name='all-button-hastag' data-item='all-button-hastag'>
+              <i class=" hashtag icon"></i>
+              ทั้งหมด
+            </a>
+            <a href="?type=camera" class="ui large red label item_tracking"  data-name='camera-button-hastag' data-item='camera-button-hastag'>
+              <i class=" hashtag icon"></i>
+              กล้อง
+            </a>
+            <a href="?type=bikes" class="ui large green label item_tracking" data-name='bike-button-hastag' data-item='bike-button-hastag'>
+              <i class=" hashtag icon"></i>
+              จักรยาน
+            </a>
+            <a href="?type=bags" class="ui large orange label item_tracking" data-name='bag-button-hastag' data-item='bag-button-hastag'>
+              <i class="  hashtag icon"></i>
+              ประเป๋า
+            </a>
+            <a href="?type=vr" class="ui large blue label item_tracking"  data-name='vr-button-hastag' data-item='vr-button-hastag'>
+              <i class="shopping hashtag icon"></i>
+              VR
+            </a>
+
+          </div>
+
+          <script id="item-template" type="text/x-handlebars-template">
+            <div id="listitem" class="ui two stackable special cards pad1em">
+              {{#each items}}
+                <div class="card item_tracking" id="{{../item_type}}-{{@index}}" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>
+                  <div class="blurring dimmable image">
+                    <div class="ui dimmer">
+                      <div class="content">
+                        <div class="center">
+                          <div class="ui inverted button" data-price='{{this.price}}' data-name='{{this.name}}' data-item='{{../item_type}}-{{@index}}'>Sign Up!</div>
+                        </div>
+                      </div>
+                    </div>
+                    <img src="./img/{{this.img}}">
+                  </div>
+                  <div class="content">
+                    <a class="title">{{this.name}}</a>
+                    <span class="right floated">
+                       <i class="bitcoin outline bitcoin icon"></i>
+                      <span class="price">  {{this.price}}/Day </span>
+                     </span>
+                  </div>
+                  <!-- <div class="extra content">
+                    <a>
+                      <i class="users icon"></i>
+                      2 Members
+                    </a>
+                  </div> -->
+                </div>
+              {{/each}}
+            </div>
+          </script>
+          <div class="content-placeholder"></div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="ui inverted vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui small image">
+          <img src="./img/logo.png" class="ui centered mini image">
+        </div>
+        <h2>Wheel Borrow</h2>
+        <span>© 2016 Wheel Borrow, All Rights Reserved</span>
+      </div>
+    </div> -->
+    <!-- <div class="ui inverted vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui stackable inverted divided grid">
+          <div class="three wide column">
+            <h4 class="ui inverted header">Group 1</h4>
+            <div class="ui inverted link list">
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link One</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Two</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Three</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Four</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">Group 2</h4>
+            <div class="ui inverted link list">
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link One</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Two</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Three</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Four</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">Group 3</h4>
+            <div class="ui inverted link list">
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link One</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Two</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Three</a>
+              <a href="http://semantic-ui.com/examples/fixed.html#" class="item">Link Four</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <div class="ui small image">
+              <img src="./img/logo.png" class="ui centered mini image">
+            </div>
+            <br/>
+            <h2>Wheel Borrow</h2>
+            <span>© 2016 SISU, All Rights Reserved</span>
+          </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <img src="./img/logo.png" class="ui centered mini image">
+        <div class="ui horizontal inverted small divided link list">
+          <a class="item" href="http://semantic-ui.com/examples/fixed.html#">Contact Us</a>
+          <a class="item" href="http://semantic-ui.com/examples/fixed.html#">Terms and Conditions</a>
+          <a class="item" href="http://semantic-ui.com/examples/fixed.html#">Privacy Policy</a>
+          <span>© 2016 SISU, All Rights Reserved</span>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    <!-- Modal -->
+    <!-- Sigup  -->
+    <div class="ui modal popup1">
+      <div class="header center">สมัครใช้บริการ</div>
+      <div class="content">
+        <div class="center"><i class="sign in icon huge"></i></div>
+        <p class="center"> เข้าร่วมเครือข่ายของผู้หลงไหลในการเดินทาง ที่คุณจะสามารถแลกเปลี่ยนสิ่งของที่ต้องการแก่ผู้อื่นในรูปแบบของการให้เช่า ไม่ต้องกังวลเรื่องของที่คุณที่ใช้เพียงครั้งเดียว เริ่มแลกเปลี่ยนกันได้ที่นี่เลย!  </p>
+        <form class="ui form">
+        <div class="field">
+          <label>ชื่อ</label>
+          <input id="rentname" type="text" name="first-name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <label>อีเมล์</label>
+          <input id="rentemail" type="text" name="email-signup" placeholder="Email">
+        </div>
+        <div class="ui button fluid primary submit item_tracking" data-name='submit-rent' data-item='submit-rent'>สมัคร</div>
+      </form>
+      </div>
+      <!-- <div class="actions">
+        <div class="ui approve button">Approve</div>
+        <div class="ui button">Neutral</div>
+        <div class="ui cancel button">Cancel</div>
+      </div> -->
+    </div>
+    <!-- How it work! -->
+    <div class="ui modal howitwork_popup">
+      <div class="content">
+        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
+        <h1 class="center">ขอบคุณที่สนใจในบริการของเรา</h1>
+        <p class="center">เรากำลังทำงานอย่างหนักเพื่อช่วยสร้างประสบการณ์ในการเดินทางของคุณให้ดีที่สุด ลงชื่อด้วยอีเมล์ของคุณเพื่อเป็นคนแรกที่ได้ใช้บริการของเรา </p>
+      </div>
+      <div class="actions">
+        <div class="ui cancel button">ปิด</div>
+      </div>
+    </div>
+    <!-- Thank you for sigup -->
+    <div class="ui modal popup2">
+      <div class="content">
+        <div class="center"><img src="./img/logo.png" style="width:80px; height: 80px" alt="" /></div>
+        <h1 class="center">ขอบคุณสำหรับการสมัครสมาชิค</h1>
+        <p class="center">คุณกำลังช่วยสร้างสังคมของการเดินทางที่ดีขึ้น</p>
+      </div>
+      <div class="actions">
+        <div class="ui cancel button">ปิด</div>
+      </div>
+    </div>
+
+    <!-- LIST YOUR ITEM -->
+    <div class="ui modal popup3">
+      <div class="header center">ต้องการให้เช่าของ</div>
+      <div class="content">
+        <div class="center"><i class="unordered list icon big"></i></div><br/>
+        <p class="center">สร้างรายได้จากของที่คุณไม่ได้ใช้แล้วกับเรา ปลอดภัย รวดเร็ว สะดวกสบาย และฟรี เรารับประกันความเสียหายสำหรับของที่คุณให้เช่า สมัครตอนนี้เพื่อเป็นส่วนหนึ่งกับเรา </p>
+        <form class="ui form">
+        <div class="field">
+          <label>อีเมล์</label>
+          <input id="borrowemail" type="text" name="email" placeholder="Email">
+        </div>
+        <div class="ui button fluid primary submit item_tracking" data-name='submit-list' data-item='submit-list' type="submit">สมัคร</div>
+      </form>
+      </div>
+      <!-- <div class="actions">
+        <div class="ui approve button">Approve</div>
+        <div class="ui button">Neutral</div>
+        <div class="ui cancel button">Cancel</div>
+      </div> -->
+    </div>
+    <script src="./js/data.js" charset="utf-8"></script>
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/ga-tracking.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0056/1467.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+    <script type="text/javascript">
+      var locations = [
+        {lat: 13.7375714, lng: 100.5021517},
+        {lat: 13.739254, lng: 100.5558497},
+        {lat: 13.7776709, lng: 100.5581593},
+        {lat: 13.8309393, lng: 100.5191849},
+        {lat: 13.7675714, lng: 100.5001517},
+        {lat: 13.6375714, lng: 100.4021517},
+        {lat: 13.6375714, lng: 100.4521517},
+        {lat: 13.6075714, lng: 100.4921517},
+        {lat: 13.7375714, lng: 100.3021517},
+        {lat: 13.7061368, lng: 100.6233907},
+        {lat: 13.6216978, lng: 100.6635198},
+        {lat: 13.591674, lng: 100.5988513},
+        {lat: 13.7330611, lng: 100.5385132},
+        {lat: 13.691674, lng: 100.5488513},
+        {lat: 13.651674, lng: 100.5688513}
+      ];
+      function initialize() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 13.7375714, lng: 100.5021517},
+          scrollwheel: false,
+          zoom: 11
+        });
+        var shape = {
+          coords: [1, 1, 1, 20, 18, 20, 18, 1],
+          type: 'poly'
+        };
+
+        for(var i = 0; i < locations.length; i++) {
+          var marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
+            map: map,
+            shape: shape,
+            position: locations[i],
+            title:"Hello World!"
+          });
+        }
+
+        console.log(locations);
+      }
+      var type = getParameterByName('type');
+      var items = [];
+
+      function render(type) {
+        var theTemplateScript = $("#item-template").html();
+
+        // Compile the template
+        var theTemplate = Handlebars.compile(theTemplateScript);
+        console.log(type);
+        // Define our data object
+        switch (type) {
+          case 'all':
+            items = itemsdata.all;
+
+            break;
+          case 'bikes':
+            items = itemsdata.bikes;
+
+            break;
+          case 'bags':
+            items = itemsdata.bags;
+
+            break;
+          case 'camera':
+            items = itemsdata.camera;
+
+
+            break;
+          case 'vr':
+            items = itemsdata.vr;
+
+            break;
+          default:
+            items = itemsdata.all;
+        }
+        console.log('what type');
+        console.log(type);
+        var context = {
+          items: items,
+          item_type: (type === null ? 'all': type)
+        };
+
+
+        // Pass our data to the template
+        var theCompiledHtml = theTemplate(context);
+
+        // Add the compiled html to the page
+        $('.content-placeholder').html(theCompiledHtml);
+
+      }
+      $(render(type));
+      initApp();
+    </script>
+    <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '957508371061027');
+  fbq('track', "PageView");</script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=957508371061027&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiOQX0v-iSPV9x916_hxQdorp3wYz1OKc&callback=initialize">
+    </script>
+    <script type="text/javascript">
+     !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+     analytics.load("IKiznUYjrx8nJgrj5y5iSr7G6I9VgqnI");
+     analytics.page()
+     }}();
+    </script>
+  </body>
+</html>
