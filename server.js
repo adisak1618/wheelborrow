@@ -63,6 +63,7 @@ app.get('/userlist', function (req, res) {
 
 app.use('/', express.static(__dirname + '/'));
 app.use('/ph', express.static(__dirname + '/ph.html'));
+app.use('/th', express.static(__dirname + '/th.html'));
 
 app.listen('80', function() {
     console.log('Node app is running on port 80')
