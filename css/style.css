@@ -10,6 +10,9 @@ body {
   background-color: #FFFFFF;
   font-family: 'Cloud-Light' !important;
 }
+/*.ui.container {
+  margin: 0px !important;
+}*/
 a, p, span,h1 ,h2 ,h3 ,h4 ,h5, div {
   font-family: 'Cloud-Light' !important;
   font-size: 1.05em;
@@ -20,9 +23,25 @@ a, p, span,h1 ,h2 ,h3 ,h4 ,h5, div {
 a {
   font-size: 1.2em;
 }
+.highlight_button {
+  background: #ff5a5f !important;
+}
+
+.highlight_button:hover {
+  background: #f9797d !important;
+}
+
+.highlight_button a{
+  color: #FFF !important;
+}
+#mainmenu img {
+  margin: -.3em auto;
+}
 #mainmenu a{
   font-weight: bold;
-  color: #FFF;
+  color: #444;
+  width: 100%;
+  text-align: center;
 }
 .center {
   text-align: center;
@@ -170,3 +189,154 @@ listitem .card .price{
 }
 
 .peso {background-size: contain;background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQxNS42MzMgNDE1LjYzNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDE1LjYzMyA0MTUuNjM0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwMy41MTYsMTQ3LjAxOUgzNDQuNjhjMS4wMTctNy4yMiwxLjY1NS0xNC43NSwxLjY1NS0yMi43NTNjMC02LjA3Ni0wLjQ2MS0xMS45MDQtMS4xMTctMTcuNTk5aDU4LjI5MiAgIGM2LjY4NSwwLDEyLjEwNS01LjQyMywxMi4xMDUtMTIuMTA1YzAtNi42ODItNS40MjEtMTIuMTA1LTEyLjEwNS0xMi4xMDVoLTYzLjQyOWMtMC44MzMtMi41NjUtMS42MTMtNS4xNjMtMi42MDYtNy42MTMgICBjLTUuODI4LTE0LjM2OS0xNC40NDYtMjYuNjc1LTI1LjYxMS0zNi41NjRjLTExLjE4OS05LjkxNS0yMS42NjktMTcuMTE3LTM3LjEwNy0yMS40MDNjLTE2LjAxOS00LjU4My0zNi4zNTItNi45MDEtNjYuNDczLTYuOTAxICAgSDEwNC4wODVjLTE2LjE5NSwwLTI3Ljk1NSwzLjMxNi0zNC45NjUsOS44NTljLTYuOTA3LDYuNDM0LTEwLjM5MSwxNy44MjctMTAuMzkxLDMzLjg3MnYyOC43NUgxMi4xMDUgICBDNS40MjMsODIuNDU1LDAsODcuODc5LDAsOTQuNTYxYzAsNi42ODMsNS40MjMsMTIuMTA1LDEyLjEwNSwxMi4xMDVoNDYuNjI0djQwLjM1M0gxMi4xMDVDNS40MjMsMTQ3LjAxOSwwLDE1Mi40NDIsMCwxNTkuMTI0ICAgczUuNDIzLDEyLjEwNSwxMi4xMDUsMTIuMTA1aDQ2LjYyNHYxOTEuNTIzYzAsMTQuNDM0LDMuMjQ4LDI1LjM0Niw5LjY1OCwzMi40NWM2LjMyNSw3LjAzMywxNC41MTQsMTAuNDU2LDI1LjA0MSwxMC40NTYgICBjOS45NjIsMCwxNy45OTUtMy40NywyNC41MTgtMTAuNjA5YzYuNTczLTcuMTg4LDkuOTEtMTguMjUzLDkuOTEtMzIuODQxVjI0Mi42NDZoODAuNDM0YzQ4LjA4NCwwLDc4LjU0OC0xMC4xNDMsMTAyLjQ4Ni0zMC4xNjIgICBjMTIuODk3LTEwLjc5OSwyMi4xODQtMjQuNjU3LDI4LjA4OC00MS4yNDhoNjQuNjY0YzYuNjgsMCwxMi4xMDUtNS40MjMsMTIuMTA1LTEyLjEwNVM0MTAuMTk1LDE0Ny4wMTksNDAzLjUxNiwxNDcuMDE5eiAgICBNMTI3Ljg1LDU4Ljg2OWg2MC43NWMzOC4zMjYsMCw2My4yNTcsNi40MSw3Ni4yMzcsMTkuNTg1YzEuMjA2LDEuMjg4LDIuMzA2LDIuNjM5LDMuMzk0LDQuMDAxSDEyNy44NVY1OC44Njl6IE0yMzguNDA1LDE4Ny4yMDYgICBjLTEzLjM4Miw0LjE3My0zMC4xMzMsNi4yODktNDkuODA0LDYuMjg5aC02MC43NXYtMjIuMjY2aDEzNy43OTJDMjU4LjU5NiwxNzguMzI4LDI0OS41MTcsMTgzLjczMywyMzguNDA1LDE4Ny4yMDZ6ICAgIE0yNzkuNTIsMTQ3LjAxOUgxMjcuODV2LTQwLjM1M2gxNTIuMDcyYzEuNDc4LDUuOTksMi4yNDYsMTIuNCwyLjI0NiwxOS4yMzlDMjgyLjE2OCwxMzMuNTkzLDI4MS4yNywxNDAuNjMyLDI3OS41MiwxNDcuMDE5eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=)}
+/*Colour*/
+.gray-bg {
+  background: #f5f5f5;
+}
+.white-bg {
+  background: #FFF;
+}
+
+.highlight-bg {
+  background: url('./../img/section1.png');
+}
+
+.highlight-bg h4 {
+  color: #FFF;
+}
+/*Section*/
+.wb-section{
+  margin-top: 50px !important;
+  background-color: #FFF;
+}
+/*Utility*/
+.header {
+  color: #484848;
+  width: 100%;
+  text-align: center;
+}
+.header h1{
+
+}
+.stepbox {
+  position: relative;
+}
+.stepbox .step {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left: -104px;
+}
+
+.circlebox {
+  margin: 0 auto;
+  width: 50px;
+  text-align: center;
+  float: left;
+  margin: 0 5px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  color: #777;
+  line-height: 48px;
+  font-size: 25px;
+  font-weight: bold;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.stepactive {
+  background: #ff5a5f;
+  color: #fff;
+}
+/*Card*/
+/*#00a699*/
+.wb-card {
+  min-height: 200px;
+  background: #FFF;
+  overflow: hidden;
+  color: #484848;
+  margin: 20px;
+  padding: 40px;
+
+}
+.wb-card label {
+  font-size: 18px !important;
+  color: #FFF !important;
+}
+.wb-card li {
+  font-size: 25px;
+  line-height: 30px;
+}
+.none-bg {
+  background: none;
+  color: #FFF;
+}
+.wb-card .center{
+  text-align: center;
+}
+.primary-colour {
+  background: #00a699 ;
+  color: #FFF ;
+}
+.wb-card h1{
+  font-size: 50px;
+  font-weight: bolder;
+}
+.wb-card h2{
+  font-size: 40px;
+  font-weight: bolder;
+}
+.wb-card img {
+  margin: 0 auto;
+}
+.wb-card a{
+  display: inline-block;
+  border-color: #ff5a5f;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+.wb-card a:hover {
+  background-color: #f9797d;
+}
+.wb-btn-primary {
+    border-color: #ff5a5f;
+    background-color: #ff5a5f;
+    color: #fff;
+}
+.wb-btn {
+    border-color: #c4c4c4;
+    background: white;
+    color: #484848;
+}
+/*How it work page*/
+#main .header_photo {
+  background-image: url('./../img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 550px;
+}
+
+/*Line*/
+
+.line {
+  background: url('./../img/line.jpg');
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+/*Header*/
+.highlight-header{
+  margin-top: 30px !important;
+  display: inline-block;
+  padding: 20px;
+  background: #ff5a5f;
+  color: #FFF;
+  font-size: 36px;
+}
+a .highlight-header:hover  {
+  background: #f9797d;
+}

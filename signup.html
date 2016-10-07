@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en-US" class="no-js lt-ie9lt-ie8 lt-ie7"> <![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="XXT6sq7TNMF_ihtFcxH033yn_aQCk3pOhu6zp-dhffY" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./semantic/semantic.min.css" media="screen" title="no title" charset="utf-8">
+  <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
+  <script src="./semantic/semantic.min.js" charset="utf-8"></script>
+  <script src="./js/pickable/picker.js" charset="utf-8"></script>
+  <script src="./js/pickable/picker.date.js" charset="utf-8"></script>
+  <script src="./js/pickable/picker.time.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/default.date.css">
+  <link rel="stylesheet" href="./css/default.time.css">
+  <link rel="stylesheet" href="./css/style.css" media="screen" title="no title">
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.3/picker.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.3/picker.date.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.3/picker.time.js"></script> -->
+  <script src="./js/legacy.js"></script>
+  <script src="./js/handlebars.js"></script>
+  <title></title>
+
+</head>
+<body class="gray-bg" data-gr-c-s-loaded="true">
+  <script id="item-template" type="text/x-handlebars-template">
+
+    <div id="mainmenu" class="ui fixed menu stackable grid">
+
+      <a href="/" class="item item_tracking one wide column" data-name='home-button' data-item='home-button'>
+        <img src="./img/logo.png">
+      </a>
+      <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
+      <div class="item eleven wide column">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+      <div class="item header item_tracking two wide column">
+        <a href="/" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>Browse</a>
+      </div>
+      <div class="item highlight_button header item_tracking two wide column">
+        <a href="/signup" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>Signup!</a>
+      </div>
+
+
+    </div>
+
+    <!-- Main body -->
+
+    <div id="main" class="ui stackable two column grid">
+
+      <!-- Signup -->
+      <!-- <div class="sixteen wide column">
+        <div class="ui three column grid container wb-section none-bg ">
+          <div class="row">
+            <div class="column center ">
+              <div class="circlebox">
+                1
+              </div>
+            </div>
+            <div class="column center">
+              <div class="circlebox">
+                2
+              </div>
+            </div>
+            <div class="column center">
+              <div class="circlebox">
+                3
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> -->
+      <!-- More detail -->
+      <div class="sixteen wide column">
+        <div class="header">
+          <br/>
+          <h1 style="font-size: 55px">{{signup_page_title}}</h1>
+        </div>
+
+        <!-- Step one -->
+        <div id="step1" class="ui stepbox column grid container wb-section highlight-bg">
+          <div class="step">
+            <div class="circlebox stepactive">
+              1
+            </div>
+            <div class="circlebox">
+              2
+            </div>
+            <div class="circlebox">
+              3
+            </div>
+          </div>
+          <div class="eight wide column">
+            <div class="wb-card none-bg">
+              <div class="ui form step1" style="margin-bottom: -30px;">
+                <h2 class="ui dividing header" style="color: #FFF; border-color: #FFF">{{signup_step1.title}}</h2>
+                <div class="field">
+                  <input type="text" name="first_name" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <input type="text" name="last_name" placeholder="Last Name">
+                </div>
+                <div class="field">
+                  <input type="text" name="email_address" placeholder="Email Adress">
+                </div>
+                <div class="field">
+                  <input type="text" name="postal_code" placeholder="Postal Code">
+                </div>
+                <p class="center">
+                  <a class="nextbutton submit">Next</a>
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="eight wide column">
+            <div class="wb-card none-bg">
+              <img class="ui small circular image" src="{{signup_step1.img}}" />
+              <h2 class="center">{{signup_step1.img-description}}</h2>
+              <p class="center">{{signup_step1.description}}</p>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+        </div>
+        <!-- End step one -->
+        <!-- Step2 -->
+        <div id="step2" style="display: none" class="ui stepbox column grid container wb-section highlight-bg">
+          <div class="step">
+            <div class="circlebox">
+              1
+            </div>
+            <div class="circlebox stepactive">
+              2
+            </div>
+            <div class="circlebox">
+              3
+            </div>
+          </div>
+          <div class="eight wide column">
+            <div class="wb-card none-bg">
+              <div class="ui form" style="margin-bottom: -30px;">
+                <h2 class="ui dividing header" style="color: #FFF; border-color: #FFF">{{signup_step2.title}}</h2>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="interest" value="Bikes">
+                    <label> Bikes</label>
+                  </div>
+
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="interest" value="Bikes">
+                    <label> Sports Equipment</label>
+                  </div>
+
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="interest" value="Bikes">
+                    <label> Backpack</label>
+                  </div>
+
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="interest" value="Bikes">
+                    <label> Cameras</label>
+                  </div>
+
+                </div>
+                <div class="field">
+                  <input type="text" name="other" placeholder="Other">
+                </div>
+                <p class="center">
+                  <a class="submitbutton">Submit</a>
+                </p>
+
+              </div>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+          <div class="eight wide column">
+            <div class="wb-card none-bg">
+              <img class="ui small circular image" src="{{signup_step2.img}}" />
+              <h2 class="center">{{signup_step2.img-description}}</h2>
+              <p class="center">{{signup_step2.description}}</p>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Us -->
+      <div id="step3" style="display:none" class="sixteen wide column">
+        <div class="ui grid container wb-section ">
+          <div class="sixteen wide column">
+            <div class="wb-card ">
+              <img class="ui small circular image" src="{{signupfinish.img}}" />
+              <h2 class="center">{{signupfinish.title}}</h2>
+              <p class="center">
+                {{signupfinish.description}}
+              </p>
+              <p class="center">
+                <a href="/">Back Home</a>
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div style="text-align: center; margin-top:40px;width: 100%">
+        © 2016 Wheelborrow, All Rights Reserved
+        <br/>
+      </div>
+    </div>
+  </script>
+  <div class="content-placeholder"></div>
+  <script src="./js/howitwork.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+    var formdata = {
+      first_name: "",
+      last_name: "",
+      email_address: "",
+      postal_code: "",
+      interest: "",
+      other: ""
+    };
+
+
+    function render() {
+      var theTemplateScript = $("#item-template").html();
+      var theTemplate = Handlebars.compile(theTemplateScript);
+      var jqxhr = $.getJSON( "data/howitworkpages.json")
+        .done(function(data) {
+          console.log( "second success" );
+          var theCompiledHtml = theTemplate(data);
+          $('.content-placeholder').html(theCompiledHtml);
+          console.log(data);
+          $('.ui.form')
+            .form({
+              on: 'blur',
+              fields: {
+                first_name: {
+                  identifier  : 'first_name',
+                  rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'โปรดระบุชื่อ'
+                    }
+                  ]
+                },
+                last_name: {
+                  identifier  : 'last_name',
+                  rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'โปรดระบุชื่อ'
+                    }
+                  ]
+                },
+                email_address: {
+                  identifier  : 'email_address',
+                  rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'โปรดระบุชื่อ'
+                    }
+                  ]
+                },
+                postal_code: {
+                  identifier  : 'postal_code',
+                  rules: [
+                    {
+                      type   : 'empty',
+                      prompt : 'โปรดระบุชื่อ'
+                    }
+                  ]
+                }
+              }
+            });
+
+            $('.nextbutton').click(function () {
+              if ($('input[name="first_name"]').val() != '' && $('input[name="last_name"]').val() != '' && $('input[name="email_address"]').val() != '' && $('input[name="postal_code"]').val() != '') {
+                formdata.first_name = $('input[name="first_name"]').val();
+                formdata.last_name = $('input[name="first_name"]').val();
+                formdata.email_address = $('input[name="email_address"]').val();
+                formdata.postal_code = $('input[name="postal_code"]').val();
+                console.log(formdata);
+                $("#step1").slideToggle(function () {
+                  $("#step2").slideToggle();
+                });
+              }
+              console.log($('input[name="first_name"]').val() != '');
+            });
+            $('.submitbutton').click(function () {
+              var interest = [];
+              var total = $("input[name='interest']").length;
+              $("input[name='interest']").each(function (index) {
+                console.log($(this).is(':checked'));
+                if ($(this).is(':checked')) {
+                  interest.push($(this).val());
+                }
+
+
+              });
+              console.log(interest);
+              arraytotext = "";
+              interest.map(function (item, index) {
+                arraytotext+= item;
+                if (index !== (interest.length-1)) {
+                  arraytotext += ",";
+                }
+              });
+              formdata.other = $('input[name="other"]').val();
+              formdata.interest = arraytotext;
+              addToServer('http://localhost:80/submitmvp2', formdata, function () {
+
+              } );
+              console.log(formdata);
+              $("#step2").slideToggle(function () {
+                $("#step3").slideToggle();
+              });
+            });
+
+        })
+        .fail(function() {
+          console.log( "error" );
+          alert('error');
+        })
+        .always(function() {
+          console.log( "complete" );
+        });
+
+
+      // Compile the template
+
+
+
+      // var context = {'hi': 'adisak'};
+
+
+      // Pass our data to the template
+      // var theCompiledHtml = theTemplate(context);
+
+      // Add the compiled html to the page
+      // $('.content-placeholder').html(theCompiledHtml);
+
+    }
+    $(render());
+  </script>
+
+</body>
+</html>

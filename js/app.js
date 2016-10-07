@@ -130,3 +130,4 @@ function getUrlVars()
       console.log( "Data Loaded: " + data );
     });
   }
+  

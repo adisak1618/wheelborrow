@@ -21,10 +21,19 @@ var User = new Schema({
   name: { type: String },
   email: { type: String }
 });
+var MvpUser = new Schema({
+  first_name: { type: String },
+  last_name: { type: String },
+  email_address: { type: String },
+  interest: { type: String },
+  other: { type: String },
+  postal_code: { type: String }
+});
 
 
 var UserModel = mongoose.model('User', User);
 var RentModel = mongoose.model('RentUser', Rent);
+var Mvp2User = mongoose.model('Mvpuser2', MvpUser);
 app.post('/submitborrow', function (req, res) {
   UserModel.create({'email': req.body.email}, function (err) {
     console.log('success');
@@ -37,6 +46,35 @@ app.post('/submitrent', function (req, res) {
     console.log('success');
     res.send('Rent success');
   });
+});
+
+app.post('/submitmvp2', function (req, res) {
+  var data = {
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email_address: req.body.email_address,
+    interest: req.body.interest,
+    other: req.body.other,
+    postal_code: req.body.postal_code
+  };
+  validate = true;
+  for (var property in data) {
+      if (data.hasOwnProperty(property)) {
+          // do stuff
+          if(data[property] === undefined || data[property] === null || data[property] === "") {
+            validate = false;
+          }
+      }
+  }
+  if (validate) {
+    Mvp2User.create(data, function (err) {
+      console.log('success');
+      res.send('Mvp2 user success');
+    });
+  } else {
+    res.send('Error');
+  }
+
 });
 
 app.get('/userlist', function (req, res) {
@@ -64,6 +102,8 @@ app.get('/userlist', function (req, res) {
 app.use('/', express.static(__dirname + '/'));
 app.use('/ph', express.static(__dirname + '/ph.html'));
 app.use('/th', express.static(__dirname + '/th.html'));
+app.use('/howitwork', express.static(__dirname + '/howitworks.html'));
+app.use('/signup', express.static(__dirname + '/signup.html'));
 
 app.listen('80', function() {
     console.log('Node app is running on port 80')

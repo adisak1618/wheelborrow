@@ -23,41 +23,197 @@
   <title></title>
 
 </head>
-<body data-gr-c-s-loaded="true">
+<body class="gray-bg" data-gr-c-s-loaded="true">
+  <script id="item-template" type="text/x-handlebars-template">
 
-  <div id="mainmenu" class="ui fixed menu stackable grid">
+    <div id="mainmenu" class="ui fixed menu stackable grid">
 
-    <a href="" class="item item_tracking one wide column" data-name='home-button' data-item='home-button'>
-      <img src="./img/logo.png">
-    </a>
-    <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
-    <div class="item nine wide column">
-      <div class="ui transparent icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search link icon"></i>
+      <a href="/" class="item item_tracking one wide column" data-name='home-button' data-item='home-button'>
+        <img src="./img/logo.png">
+      </a>
+      <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
+      <div class="item eleven wide column">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+      <div class="item header item_tracking two wide column">
+        <a href="/" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>Browse</a>
+      </div>
+      <div class="item highlight_button header item_tracking two wide column">
+        <a href="/signup" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>Signup!</a>
+      </div>
+
+
+    </div>
+
+    <!-- Main body -->
+
+    <div id="main" class="ui stackable two column grid">
+      <div class="sixteen wide column header_photo">
+        <div class="ui stackable two column grid container">
+          <div class="seven wide column">
+            <div class="wb-card primary-colour">
+              <h1>{{header.title}}</h1>
+              <p>
+                {{header.description}}
+              </p>
+              <a href="#">{{header.button}}</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="sixteen wide column white-bg">
+        <div class="ui stackable two column grid container">
+          <div class="ten wide column">
+            <div class="wb-card white-bg">
+              <h1>{{secord-header.title}}</h1>
+              <p>
+                {{secord-header.description}}
+              </p>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+          <div class="six wide column">
+            <div class="wb-card white-bg">
+              <img class="ui small circular image" src="{{secord-header.img}}" />
+              <h2 class="center">{{secord-header.img-description}}</h2>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Step 1 -->
+      <div class="sixteen wide column line">
+        <div class="center">
+          <h1 class="highlight-header">How It Work!</h1>
+        </div>
+        {{#each step}}
+          <div class="ui stackable two grid container wb-section">
+            <div class="six wide column">
+              <div class="wb-card white-bg">
+                <img class="ui small circular image" src="{{this.img}}" />
+                <h2 class="center">{{this.img-description}}</h2>
+                <!-- <a href="#">{{header.button}}</a> -->
+              </div>
+            </div>
+            <div class="ten wide column">
+              <div class="wb-card white-bg">
+                <h1>{{this.title}}</h1>
+                <p>
+                  {{this.description}}
+                </p>
+                {{#if this.label}}
+                  <ul>
+                    {{#each this.label}}
+                      <li>{{this}}</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+                <!-- <a href="#">{{header.button}}</a> -->
+              </div>
+            </div>
+          </div>
+        {{/each}}
+
+      <!-- More detail -->
+
+        <div class="ui stackable two column grid container wb-section highlight-bg">
+          <div class="six wide column">
+            <div class="wb-card none-bg">
+              <img class="ui small circular image" src="{{guarantee.img}}" />
+              <h2 class="center">{{guarantee.img-description}}</h2>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+          <div class="ten wide column">
+            <div class="wb-card none-bg">
+              <h1>{{guarantee.title}}</h1>
+              <p>
+                {{guarantee.description}}
+              </p>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+
+        </div>
+        <div class="center">
+          <br/><br/>
+          <a href="/signup"><h1 class="highlight-header">Let's Start</h1></a>
+        </div>
+
+      <!-- Contact Us -->
+
+        <div class="ui grid container wb-section ">
+          <div class="sixteen wide column">
+            <div class="wb-card ">
+              <img class="ui small circular image" src="{{contactus.img}}" />
+              <h2 class="center">{{contactus.title}}</h2>
+              <p class="center">
+                {{contactus.description}}
+
+              </p>
+              <p class="center">
+                <a href='mailto:contact@wheelborrow.co?Subject=Ask'>Email us</a>
+              </p>
+              <!-- <a href="#">{{header.button}}</a> -->
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div style="text-align: center; margin-top:40px;width: 100%">
+        © 2016 Wheelborrow, All Rights Reserved
+        <br/>
       </div>
     </div>
-    <div class="item header item_tracking two wide column">
-      <a href="#" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>How It Works!</a>
-    </div>
+  </script>
+  <div class="content-placeholder"></div>
+  <script src="./js/howitwork.js" charset="utf-8"></script>
+  <script type="text/javascript">
 
 
-  </div>
-
-  <!-- Main body -->
-
-  <div id="main" class="ui stackable grid">
-    <div class="sixteen wide column header_photo">
-      <div class="ui container">
-        <h1>dd</h1>
-      </div>
-    </div>
-
-    </div>
 
 
-  </div>
+    function render() {
+      var theTemplateScript = $("#item-template").html();
+      var theTemplate = Handlebars.compile(theTemplateScript);
+      var jqxhr = $.getJSON( "data/howitworkpages.json")
+        .done(function(data) {
+          console.log( "second success" );
+          var theCompiledHtml = theTemplate(data);
+          $('.content-placeholder').html(theCompiledHtml);
+          console.log(data);
+        })
+        .fail(function() {
+          console.log( "error" );
+          alert('error');
+        })
+        .always(function() {
+          console.log( "complete" );
+        });
 
+
+      // Compile the template
+
+
+
+      // var context = {'hi': 'adisak'};
+
+
+      // Pass our data to the template
+      // var theCompiledHtml = theTemplate(context);
+
+      // Add the compiled html to the page
+      // $('.content-placeholder').html(theCompiledHtml);
+
+    }
+    $(render());
+  </script>
 
 </body>
 </html>

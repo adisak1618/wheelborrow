@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "Earn Money From Idle Items in your House!",
+    "description": "Cameras, bikes, backpacks, you name it. Put these items to use by lending it to others. The platform is safe, easy and convenient to use.",
+    "button": "Start!"
+  },
+  "secord-header": {
+    "title": "What is Wheel Borrow?",
+    "description": "Wheel borrow is a platform that helps to connect people who has things to lend and people who are looking to rent things. Think airbnb but for stuff. ",
+    "img": "./img/people1.jpg",
+    "img-description": "Eieieieieieiei"
+  },
+  "step": [
+    {
+      "title": "",
+      "description": "",
+      "label": [
+        "Register on our site",
+        "Enter your basic profile",
+        "Start listing your items to be lent out",
+        "Set conditions and prices that you want"
+      ],
+      "img":"./img/icon/2.png",
+      "img-description": "1. Listing your items"
+    },
+    {
+      "title": "",
+      "description": "",
+      "label": [
+        "Borrowers will find you and send a request to book your item",
+        "You can assess their profile and approve or reject their request"
+      ],
+      "img":"./img/icon/3.png",
+      "img-description": "2. Match with a borrower"
+    },
+    {
+      "title": "",
+      "description": "",
+      "label": [
+        "Arrange a time and place to pickup and return the item",
+        "Borrowers will make a payment and their deposit on the platform",
+        "Lenders are paid automatically in full once the borrower confirms that they’ve received their item"
+      ],
+      "img":"./img/icon/6.png",
+      "img-description": "3. Exchange the items and payment"
+    }
+  ],
+  "guarantee": {
+    "title": "We’ve got you covered",
+    "img":"./img/icon/4.png",
+    "img-description": "Safety",
+    "description": "In case of damage or loss items, the borrower will the liable. The lenders are allowed to claim the price of fixage in the case of damage and can claim up to 70% item’s retail value if lost. The amount is deducted from the borrower’s credit card and deposited to the lender’s account"
+  },
+  "contactus": {
+    "title": "Contact us",
+    "img":"./img/icon/5.png",
+    "description": "Got questions? Send us an email at contact@wheelborrow.co the team will get back to you."
+  },
+  "signup_step1": {
+    "title": "Create an account to get started!",
+    "img":"./img/people1.jpg",
+    "img-description": "Infomation",
+    "description": "Please fill your information"
+  },
+  "signup_page_title": "Sign Up",
+  "signup_step2": {
+    "title": "Already got items in mind?",
+    "img":"./img/icon/1.png",
+    "img-description": "List your items",
+    "description": ""
+  },
+  "signupfinish": {
+    "img":"./img/people1.jpg",
+    "title": "Thank You For Register",
+    "description": "We’ll verify your information and once your account is ready we’ll mail you the activation link to our site."
+  }
+}
