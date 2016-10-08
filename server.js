@@ -49,6 +49,11 @@ app.post('/submitrent', function (req, res) {
 });
 
 app.post('/submitmvp2', function (req, res) {
+  console.log(req.body.first_name);
+  console.log(req.body.last_name);
+  console.log(req.body.email_address);
+  console.log(req.body.interest);
+  console.log(req.body.other);
   var data = {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -61,7 +66,7 @@ app.post('/submitmvp2', function (req, res) {
   for (var property in data) {
       if (data.hasOwnProperty(property)) {
           // do stuff
-          if(data[property] === undefined || data[property] === null || data[property] === "") {
+          if(data[property] === undefined || data[property] === null) {
             validate = false;
           }
       }

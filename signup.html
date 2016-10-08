@@ -155,21 +155,21 @@
                 </div>
                 <div class="field">
                   <div class="ui checkbox">
-                    <input type="checkbox" name="interest" value="Bikes">
+                    <input type="checkbox" name="interest" value="Sports">
                     <label> Sports Equipment</label>
                   </div>
 
                 </div>
                 <div class="field">
                   <div class="ui checkbox">
-                    <input type="checkbox" name="interest" value="Bikes">
+                    <input type="checkbox" name="interest" value="Backpack">
                     <label> Backpack</label>
                   </div>
 
                 </div>
                 <div class="field">
                   <div class="ui checkbox">
-                    <input type="checkbox" name="interest" value="Bikes">
+                    <input type="checkbox" name="interest" value="Cameras">
                     <label> Cameras</label>
                   </div>
 
@@ -320,7 +320,7 @@
               });
               formdata.other = $('input[name="other"]').val();
               formdata.interest = arraytotext;
-              addToServer('http://wheelborrow.co/submitmvp2', formdata, function () {
+              addToServer('http://localhost/submitmvp2', formdata, function () {
 
               } );
               console.log(formdata);
