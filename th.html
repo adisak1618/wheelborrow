@@ -24,23 +24,26 @@
   </head>
   <body class="th" data-gr-c-s-loaded="true">
 
-    <div id="mainmenu" class="ui fixed inverted menu">
+    <div id="mainmenu" class="ui fixed menu stackable grid">
 
-      <a href="" class="header item item_tracking" data-name='th-home-button' data-item='th-home-button'>
-        <img class="logo" src="./img/logo.png">
-        Wheel Borrow
+      <a href="/" class="item item_tracking one wide column" data-name='home-button' data-item='home-button'>
+        <img src="./img/logo.png">
       </a>
-      <!-- <a class="item item_tracking" data-name='th-home-button' data-item='th-home-button'>Home</a> -->
-
-      <div class="right menu">
-        <a  class="item item_tracking howitworkbutton"  data-name='th-How-it-work' data-item='th-How-it-work'>ใช้ยังไง?</a>
-        <a class="item">
-          <div class="ui primary button listingyouitem_button item_tracking" data-name='th-list-your-item' data-item='th-list-your-item'>
-            ลงของเช่า
-          </div>
-        </a>
-
+      <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
+      <div class="item eleven wide column">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
       </div>
+      <div class="item header item_tracking two wide column">
+        <a href="/howitwork" class="item_tracking"  data-name='How-it-work' data-item='How-it-work'>How it Works!</a>
+      </div>
+      <div class="item highlight_button header item_tracking two wide column">
+        <a href="/signup" class="item_tracking"  data-name='Signup-button' data-item='Signup-button'>Signup!</a>
+      </div>
+
+
     </div>
     <div class="app_contianer">
       <div id="app" class="ui stackable grid">

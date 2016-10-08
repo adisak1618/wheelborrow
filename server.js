@@ -102,7 +102,7 @@ app.get('/userlist', function (req, res) {
 app.use('/', express.static(__dirname + '/'));
 app.use('/ph', express.static(__dirname + '/ph.html'));
 app.use('/th', express.static(__dirname + '/th.html'));
-app.use('/howitwork', express.static(__dirname + '/howitworks.html'));
+app.use('/howitworks', express.static(__dirname + '/howitworks.html'));
 app.use('/signup', express.static(__dirname + '/signup.html'));
 
 app.listen('80', function() {

@@ -71,7 +71,7 @@
   },
   "signupfinish": {
     "img":"./img/people1.jpg",
-    "title": "Thank You For Register",
+    "title": "Registering",
     "description": "We’ll verify your information and once your account is ready we’ll mail you the activation link to our site."
   }
 }
