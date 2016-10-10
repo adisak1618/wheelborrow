@@ -10,3 +10,22 @@ function addToServer (url, data, cb) {
 
   });
 }
+
+//Tracking segment
+$('.item_tracking').click(function () {
+  trackid = $(this).data('event');
+  category = $(this).data('category');
+  label = $(this).data('label');
+  if (category === undefined) {
+    category = "no data"
+  }
+
+  if (label === undefined) {
+    label = "no price"
+  }
+  // analytics.track(trackid, {
+  //   name: title,
+  //   price:price    });
+
+  analytics.track(trackid, {category: category, label: label,value: 1});
+})
