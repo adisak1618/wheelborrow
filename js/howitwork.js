@@ -12,20 +12,23 @@ function addToServer (url, data, cb) {
 }
 
 //Tracking segment
-$('.item_tracking').click(function () {
-  trackid = $(this).data('event');
-  category = $(this).data('category');
-  label = $(this).data('label');
-  if (category === undefined) {
-    category = "no data"
-  }
+function tracking () {
+  $('.item_tracking').click(function () {
+    // console.log($(this));
+    trackid = $(this).data('event');
+    category = $(this).data('category');
+    label = $(this).data('label');
+    if (category === undefined) {
+      category = "no data"
+    }
 
-  if (label === undefined) {
-    label = "no price"
-  }
-  // analytics.track(trackid, {
-  //   name: title,
-  //   price:price    });
+    if (label === undefined) {
+      label = "no price"
+    }
+    // analytics.track(trackid, {
+    //   name: title,
+    //   price:price    });
 
-  analytics.track(trackid, {category: category, label: label,value: 1});
-})
+    analytics.track(trackid, {category: category, label: label,value: 1});
+  })
+}

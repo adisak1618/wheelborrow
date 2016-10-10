@@ -33,16 +33,16 @@
       </a>
       <!-- <a class="item item_tracking" data-name='home-button' data-item='home-button'>Home</a> -->
       <div class="item eleven wide column">
-        <div class="ui transparent icon input">
-          <input type="text" placeholder="Search...">
+        <div class="ui transparent icon input" >
+          <input type="text" class="item_tracking" data-event="search" data-category="search" data-label="people click on seach section" placeholder="Search...">
           <i class="search link icon"></i>
         </div>
       </div>
       <div class="item header item_tracking two wide column">
-        <a href="/" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>Browse</a>
+        <a href="/" class="item_tracking howitworkbutton"  data-event="Browse" data-category="howitworks-page" data-label="Browse">Browse</a>
       </div>
       <div class="item highlight_button header item_tracking two wide column">
-        <a href="/signup" class="item_tracking howitworkbutton"  data-name='How-it-work' data-item='How-it-work'>Signup!</a>
+        <a href="/signup" class="item_tracking howitworkbutton"  data-event="singup" data-category="howitworks-page" data-label="signup button top menu">Signup!</a>
       </div>
 
 
@@ -52,14 +52,14 @@
 
     <div id="main" class="ui stackable two column grid">
       <div class="sixteen wide column header_photo">
-        <div class="ui stackable two column grid container">
-          <div class="seven wide column">
+        <div class="ui stackable column grid container">
+          <div class="twelve wide tablet eight wide computer column">
             <div class="wb-card primary-colour">
               <h1>{{header.title}}</h1>
               <p>
                 {{header.description}}
               </p>
-              <a href="/signup">{{header.button}}</a>
+              <a href="/signup" class="item_tracking" data-event="signup" data-category="howitworks-page" data-label="start button">{{header.button}}</a>
             </div>
           </div>
 
@@ -142,7 +142,7 @@
         </div>
         <div class="center">
           <br/><br/>
-          <a href="/signup"><h1 class="highlight-header">Let's Start</h1></a>
+          <a href="/signup"><h1 class="highlight-header item_tracking" data-event="signup" data-category="howitworks-page" data-label="let's start button">Let's Start</h1></a>
         </div>
 
       <!-- Contact Us -->
@@ -157,7 +157,7 @@
 
               </p>
               <p class="center">
-                <a href='mailto:contact@wheelborrow.co?Subject=Ask'>Email us</a>
+                <a href='mailto:contact@wheelborrow.co?Subject=Ask' class="item_tracking" data-event="emailus" data-category="howitworks-page" data-label="email'us button">Email us</a>
               </p>
               <!-- <a href="#">{{header.button}}</a> -->
             </div>
@@ -187,7 +187,9 @@
           console.log( "second success" );
           var theCompiledHtml = theTemplate(data);
           $('.content-placeholder').html(theCompiledHtml);
-          console.log(data);
+          // console.log(tracking);
+          tracking();
+          // console.log(data);
         })
         .fail(function() {
           console.log( "error" );
@@ -213,9 +215,6 @@
 
     }
     $(render());
-  </script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiOQX0v-iSPV9x916_hxQdorp3wYz1OKc&callback=initialize">
   </script>
   <script type="text/javascript">
    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
