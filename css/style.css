@@ -85,7 +85,7 @@ a {
   position: fixed !important;
   top: 203px;
   left: 0px;
-  /*height: 100%;*/
+  height: 100%;
   width: 50%;
 }
 #mapContianer{
