@@ -62,7 +62,7 @@ app.post('/submitmvp2', function (req, res) {
     interest: req.body.interest,
     other: req.body.other,
     postal_code: req.body.postal_code,
-    country: (req.body.country ? '': req.body.country)
+    country: (req.body.country ? req.body.country: '')
   };
   validate = true;
   for (var property in data) {
