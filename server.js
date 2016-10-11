@@ -113,6 +113,11 @@ app.use('/howitworks', express.static(__dirname + '/howitworks.html'));
 app.use('/signup', express.static(__dirname + '/signup.html'));
 app.use('/th/howitworks', express.static(__dirname + '/howitworks-th.html'));
 app.use('/th/signup', express.static(__dirname + '/signup-th.html'));
+app.use('/userlistmvp2', function (req, res) {
+  Mvp2User.find({}, function (err, data) {
+    res.json(data);
+  })
+});
 
 app.listen('80', function() {
     console.log('Node app is running on port 80')
