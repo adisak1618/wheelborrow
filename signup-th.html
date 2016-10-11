@@ -303,6 +303,7 @@
                 formdata.last_name = $('input[name="first_name"]').val();
                 formdata.email_address = $('input[name="email_address"]').val();
                 formdata.postal_code = $('input[name="postal_code"]').val();
+
                 // console.log(formdata);
                 $("#step1").slideToggle(function () {
                   $("#step2").slideToggle();
@@ -332,6 +333,7 @@
               });
               formdata.other = $('input[name="other"]').val();
               formdata.interest = arraytotext;
+              formdata.country = 'thailand';
               addToServer('/submitmvp2', formdata, function () {
 
               } );
