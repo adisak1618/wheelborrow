@@ -109,6 +109,8 @@ app.use('/ph', express.static(__dirname + '/ph.html'));
 app.use('/th', express.static(__dirname + '/th.html'));
 app.use('/howitworks', express.static(__dirname + '/howitworks.html'));
 app.use('/signup', express.static(__dirname + '/signup.html'));
+app.use('/th/howitworks', express.static(__dirname + '/howitworks-th.html'));
+app.use('/th/signup', express.static(__dirname + '/signup-th.html'));
 
 app.listen('80', function() {
     console.log('Node app is running on port 80')
